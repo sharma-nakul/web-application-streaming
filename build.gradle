@@ -1,0 +1,39 @@
+group 'edu.sjsu.cmpe239'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.7.RELEASE")
+    }
+    repositories {
+        mavenCentral()
+
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+//noinspection GroovyAssignabilityCheck
+jar {
+    baseName = 'cmpe239WebApp'
+    version = '1.0'
+    mainClassName = "edu.sjsu.config.WebApp"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+    compile 'org.springframework:spring-context:4.2.2.RELEASE'
+    compile("org.springframework.boot:spring-boot-starter-web:1.2.7.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile 'javax.servlet:jstl:1.2'
+    compile 'commons-logging:commons-logging:1.2'
+    compile 'com.datastax.cassandra:cassandra-driver-core:2.1.9'
+
+}
