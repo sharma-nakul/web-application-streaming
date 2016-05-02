@@ -35,5 +35,5 @@ dependencies {
     compile 'javax.servlet:jstl:1.2'
     compile 'commons-logging:commons-logging:1.2'
     compile 'com.datastax.cassandra:cassandra-driver-core:2.1.9'
-
+    compile 'com.googlecode.charts4j:charts4j:1.3'
 }
